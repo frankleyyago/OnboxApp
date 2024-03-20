@@ -188,6 +188,7 @@ namespace ONBOXAppl
             IList<RibbonPanel> allProjectPanels = new List<RibbonPanel>();
             IList<RibbonPanel> allFreePanels = new List<RibbonPanel>();
 
+            RibbonPanel panelDocumentation = application.CreateRibbonPanel(ribbonONBOX, Properties.RibbonLanguage.InteriorElevation_Title);
             RibbonPanel panelRenumber = application.CreateRibbonPanel(ribbonONBOX, Properties.RibbonLanguage.RenumberElements_Title);
             RibbonPanel panelStructuralMembers = application.CreateRibbonPanel(ribbonONBOX, Properties.RibbonLanguage.StructuralElements_Title);
             RibbonPanel panelModifyElem = application.CreateRibbonPanel(ribbonONBOX, Properties.RibbonLanguage.ModifyElements_Title);
@@ -196,6 +197,7 @@ namespace ONBOXAppl
             RibbonPanel panelAbout = application.CreateRibbonPanel(ribbonONBOX, Properties.RibbonLanguage.MoreInfo_Title);
             RibbonPanel panelNotifications = null;
 
+            allProjectPanels.Add(panelDocumentation);
             allProjectPanels.Add(panelRenumber);
             allProjectPanels.Add(panelStructuralMembers);
             allProjectPanels.Add(panelModifyElem);
@@ -203,6 +205,9 @@ namespace ONBOXAppl
             allProjectPanels.Add(panelManage);
             allFreePanels.Add(panelAbout);
             allFreePanels.Add(panelNotifications);
+
+            PushButton btnInteriorElevation = panelDocumentation.AddItem(new PushButtonData(Properties.RibbonLanguage.InteriorElevation_Title, Properties.RibbonLanguage.InteriorElevation_Title.Replace("\\n", "\n"), dll, "ONBOXAppl.InteriorElevation")) as PushButton;
+            btnInteriorElevation.SetContextualHelp(new ContextualHelp(ContextualHelpType.Url, Properties.HelpLinks.btnInteriorElevation));
 
             PushButton btnRenumberGrids = panelRenumber.AddItem(new PushButtonData(Properties.RibbonLanguage.RenumberElements_Grids, Properties.RibbonLanguage.RenumberElements_Grids.Replace("\\n", "\n"), dll, "ONBOXAppl.RenumberGridsAdvanced")) as PushButton;
             btnRenumberGrids.SetContextualHelp(new ContextualHelp(ContextualHelpType.Url, Properties.HelpLinks.btnRenumberGrids));
@@ -312,6 +317,11 @@ namespace ONBOXAppl
             //BitmapImage ProjectExamples32 = new BitmapImage(new Uri("pack://application:,,,/ONBOXAppl;component/Resources/btnProjectExamplesFolder.png", UriKind.Absolute));
             BitmapImage Package16 = new BitmapImage(new Uri("pack://application:,,,/ONBOXAppl;component/Resources/btnPackage16.png", UriKind.Absolute));
             BitmapImage Package32 = new BitmapImage(new Uri("pack://application:,,,/ONBOXAppl;component/Resources/btnPackage32.png", UriKind.Absolute));
+
+            btnInteriorElevation.LargeImage = grid32;
+            btnInteriorElevation.Image = grid16;
+            btnInteriorElevation.ToolTip = Properties.RibbonLanguage.RenumberElements_Grids_ToolTip;
+            btnInteriorElevation.LongDescription = Properties.RibbonLanguage.RenumberElements_Grids_Descrip;
 
             btnRenumberGrids.LargeImage = grid32;
             btnRenumberGrids.Image = grid16;

@@ -267,6 +267,9 @@
   <data name="RenumberElements_Title" xml:space="preserve">
     <value>Renumber Elements</value>
   </data>
+	<data name="InteriorElevation_Title" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
   <data name="StructuralElements_BeamsForBuilding" xml:space="preserve">
     <value>Create Beams</value>
   </data>

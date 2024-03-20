@@ -305,6 +305,7 @@
     <Compile Include="ExceptionManager\ExceptionManagerUI.xaml.cs">
       <DependentUpon>ExceptionManagerUI.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InteriorElevation\InteriorElevation.cs" />
     <Compile Include="ONBOXApp.cs" />
     <Compile Include="PadsFromFloor\PadsFromFloors.cs" />
     <Compile Include="PrivacyUI.xaml.cs">
@@ -448,6 +449,7 @@
     <EmbeddedResource Include="Properties\RibbonLanguage.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RibbonLanguage.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\WindowLanguage.pt-BR.resx" />
     <EmbeddedResource Include="Properties\WindowLanguage.resx">

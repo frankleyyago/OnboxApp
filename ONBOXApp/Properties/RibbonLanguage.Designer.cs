@@ -142,6 +142,15 @@ namespace ONBOXAppl.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Documentation.
+        /// </summary>
+        public static string InteriorElevation_Title {
+            get {
+                return ResourceManager.GetString("InteriorElevation_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Package\nProject.
         /// </summary>
         public static string Manage_PackageProject {

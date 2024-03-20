@@ -194,7 +194,18 @@ namespace ONBOXAppl.Properties {
                 return ResourceManager.GetString("btnRenumberGrids", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to https://onboxapp-onbox.gitbook.io/onboxapp/renumber-elements/renumber-grids.
+        /// </summary>
+        public static string btnInteriorElevation
+        {
+            get
+            {
+                return ResourceManager.GetString("btnRenumberGrids", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to https://onboxapp-onbox.gitbook.io/onboxapp/renumber-elements/renumber-parking-spaces.
         /// </summary>
